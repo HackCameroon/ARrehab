@@ -32,6 +32,7 @@ class ViewController: UIViewController, ARSessionDelegate {
         let arConfig = ARWorldTrackingConfiguration()
         arConfig.planeDetection = .horizontal
         
+        //Checks if the device supports people occlusion
         if ARWorldTrackingConfiguration.supportsFrameSemantics(.personSegmentationWithDepth) {
             arConfig.frameSemantics.insert(.personSegmentationWithDepth)
         } else {
@@ -61,7 +62,7 @@ class ViewController: UIViewController, ARSessionDelegate {
             guard !hasMapped else {break}
             guard let planeAnchor = anc as? ARPlaneAnchor else {return}
             
-            if isValidSurface(plane: planeAnchor) {
+            if isValidSurface(plane: planeAnchor, extent1: 1, extent2: 2) {
                 visualizePlanes(anchors: [planeAnchor])
                 generateBoard(planeAnchor: planeAnchor)
                 hasMapped = true
@@ -70,21 +71,25 @@ class ViewController: UIViewController, ARSessionDelegate {
         
     }
     
-    func isValidSurface(plane: ARPlaneAnchor) -> Bool {
+    /*
+     Returns true if a given plane's extents match the given requirements
+     Does not differentiate between x and z
+     */
+    func isValidSurface(plane: ARPlaneAnchor, extent1: Float, extent2: Float) -> Bool {
         guard plane.alignment == .horizontal else {return false}
-        let boundaryOne = plane.extent.x
-        let boundaryTwo = plane.extent.z
-        return min(boundaryOne, boundaryTwo) >= 1 && max(boundaryOne, boundaryTwo) >= 2
+        guard min(plane.extent.x, plane.extent.z) >= min(extent1, extent2) else {return false}
+        guard max(plane.extent.x, plane.extent.z) >= max(extent1, extent2) else {return false}
+        return true;
     }
     
-    func updateCustomUI(message: String) {
-        print(message)
-    }
-    
-    
+    /*
+     Takes a valid horizontal plane and generates a GameBoard object containing Tiles that fit within the plane at the time of function call
+     Assigns the GameBoard object to the class var gameboard
+     Adds the GameBoard's board anchor to the scene
+     */
     func generateBoard(planeAnchor: ARPlaneAnchor) {
         
-        guard isValidSurface(plane: planeAnchor) else {return}
+        guard isValidSurface(plane: planeAnchor, extent1: 1, extent2: 2) else {return}
         
         let xExtent = planeAnchor.extent.x
         let zExtent = planeAnchor.extent.z
@@ -97,9 +102,10 @@ class ViewController: UIViewController, ARSessionDelegate {
         
         var listOfTiles : [Tile] = []
         
-        while abs(currentX) <= xExtent/2 {
-            while abs(currentZ) <= zExtent/2 {
-                let newTile = Tile(name: String(format: "Tile (%f,%f)", currentX, currentZ), x: currentX, z: currentZ)
+        //Note: The adjustment present in the tile translation ensures that an appropriate vertex of the tile is at the given coordinates, rather than the center (so the tiles do not overextend the plane)
+        while abs(currentX) <= xExtent/2 - xSize/2 {
+            while abs(currentZ) <= zExtent/2 - zSize/2 {
+                let newTile = Tile(name: String(format: "Tile (%f,%f)", currentX, currentZ), x: currentX - xSize/2, z: currentZ - zSize/2)
                 listOfTiles.append(newTile)
                 currentZ -= zSize
             }
@@ -143,7 +149,7 @@ extension ViewController {
     func visualizePlanes(anchors: [ARAnchor], floor: Bool) {
         let validAnchors = anchors.filter() {anc in
             guard let planeAnchor = anc as? ARPlaneAnchor else {return false}
-            return isValidSurface(plane: planeAnchor) == floor
+            return isValidSurface(plane: planeAnchor, extent1: 1, extent2: 2) == floor
         }
         
         visualizePlanes(anchors: validAnchors)

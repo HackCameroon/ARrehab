@@ -14,13 +14,15 @@ import ARKit
  GameBoard object represents the game board. It holds references to all tiles on the board, as well as the minigames assigned to each tile. It contains methods for board object generation, board object deletion, and path generation.
  Instance variables:
     tiles: List of all Tile objects contained in the game board
-    games: Dictionary consisting of Tile-Minigame value pairs
+    surfaceAnchor: The plane anchor on which the gameboard is initialized
     board: ModelEntity representing the board, to be displayed in the scene
+    games: Dictionary consisting of Tile-Minigame value pairs
  Instance methods:
     init(tiles: [Tile]): Initializes a new GameBoard object instance from a list of Tiles
         - Generates the physical entity to be displayed in the scene
         - Assigns minigames to every tile
     init(tiles: [Tile], games: [Minigame]): Optional init, initializes a GameBoard object with a predefined list of games (*Length of games must equal # of tiles)
+    init(nilLiteral: ()): Allows the GameBoard object to be instantiated as nil
     generateBoard():
         - Adds all of the tiles in self.tiles to the board AnchorEntity (mutates self.board)
         - Sets any initial aesthetic aspects of the tiles

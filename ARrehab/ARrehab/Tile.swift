@@ -26,7 +26,7 @@ class Tile : Entity, HasModel, HasCollision {
         self.components[ModelComponent] = ModelComponent(mesh: MeshResource.generateBox(size: Tile.tileSize, cornerRadius: 0.2), materials: [SimpleMaterial()])
         self.components[CollisionComponent] = CollisionComponent(shapes: [ShapeResource.generateBox(width: 0.5, height: 4.0, depth: 0.5)], mode: .trigger, filter: .sensor)
         
-        self.transform.translation = adjustTransformTranslation(coords: self.coords)
+        self.transform.translation = SIMD3(x, 0.0, z)
         print("Generated Tile: " + name)
         
     }
@@ -38,24 +38,10 @@ class Tile : Entity, HasModel, HasCollision {
 
 extension Tile {
     
+    //Data structure for storing and providing access to a Tile's x and z coordinates
     struct Coordinates : Hashable, Equatable {
         var x : Float
         var z : Float
-    }
-    
-    //Adjusts the translation of the tiles so that the appropriate vertex of the tile is at the coordinates it is initialized with (rather than the center)
-    func adjustTransformTranslation(coords: Coordinates) -> SIMD3<Float> {
-        let yTranslation: Float = 0
-        var xTranslation: Float
-        var zTranslation: Float
-        
-        if coords.x >= 0 {xTranslation = coords.x - (Tile.tileSize.x / 2)}
-        else {xTranslation = coords.x + (Tile.tileSize.x / 2)}
-        
-        if coords.z >= 0 {zTranslation = coords.z - (Tile.tileSize.z / 2)}
-        else {zTranslation = coords.z + (Tile.tileSize.z / 2)}
-        
-        return SIMD3(xTranslation, yTranslation, zTranslation)
     }
     
 }
