@@ -9,7 +9,7 @@
 import UIKit
 import ARKit
 
-class ViewController: UIViewController, ARSessionDelegate {
+class FaceViewController: UIViewController, ARSessionDelegate {
     
     @IBOutlet weak var sceneView: SCNView!
     @IBOutlet weak var actionLabel: UILabel!
@@ -210,7 +210,7 @@ class ViewController: UIViewController, ARSessionDelegate {
         self.totalExpressionsSucceeded += 1
         feedbackGenerator.notificationOccurred(.success)
         if let frame = self.currentFrame, let image = UIImage(pixelBuffer: frame.capturedImage) {
-            self.saveImageToFaceDirectory(image)
+//            self.saveImageToFaceDirectory(image)
         }
         self.showNextExpressionWhenReady()
     }
@@ -260,15 +260,15 @@ class ViewController: UIViewController, ARSessionDelegate {
         self.faceImageView.isHidden = false
     }
     
-    func saveImageToFaceDirectory(_ image: UIImage) {
-        let index = self.totalFaceImages
-        DispatchQueue.global(qos: .userInitiated).async {
-            // we do this on a secondary thread since rotating & saving actually takes quite a bit of time
-            let rotatedImage = image.rotated(by: Measurement(value: 90.0, unit: .degrees))!
-            try? UIImagePNGRepresentation(rotatedImage)?.write(to: URL(fileURLWithPath: self.pathForImageWith(index: index)))
-        }
-        self.totalFaceImages += 1
-    }
+//    func saveImageToFaceDirectory(_ image: UIImage) {
+//        let index = self.totalFaceImages
+//        DispatchQueue.global(qos: .userInitiated).async {
+//            // we do this on a secondary thread since rotating & saving actually takes quite a bit of time
+//            let rotatedImage = image.rotated(by: Measurement(value: 90.0, unit: .degrees))!
+//            try? UIImage.pngData(rotatedImage).write(to: URL(fileURLWithPath: self.pathForImageWith(index: index)))
+//        }
+//        self.totalFaceImages += 1
+//    }
     
     func pathForImageWith(index: Int) -> String {
         let documentsUrl =  FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first! as URL

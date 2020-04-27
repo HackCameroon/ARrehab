@@ -20,6 +20,18 @@
 		159A420F23F49286000A5376 /* ARrehabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159A420E23F49286000A5376 /* ARrehabUITests.swift */; };
 		15E002DE243AA3CD00BA6A96 /* MovementGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E002DD243AA3CD00BA6A96 /* MovementGame.swift */; };
 		19B1736A2403475400845819 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B173692403475400845819 /* Tile.swift */; };
+		9474D3382456B3DA0096795C /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474D30E2456B3DA0096795C /* FaceViewController.swift */; };
+		9474D3392456B3DA0096795C /* Expressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474D30F2456B3DA0096795C /* Expressions.swift */; };
+		9474D33B2456B3DA0096795C /* FaceLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9474D3112456B3DA0096795C /* FaceLaunchScreen.storyboard */; };
+		9474D33C2456B3DA0096795C /* FaceMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9474D3132456B3DA0096795C /* FaceMain.storyboard */; };
+		9474D33D2456B3DA0096795C /* VirtualFaceContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474D3162456B3DA0096795C /* VirtualFaceContent.swift */; };
+		9474D33E2456B3DA0096795C /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474D3172456B3DA0096795C /* Mask.swift */; };
+		9474D33F2456B3DA0096795C /* FaceAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474D3182456B3DA0096795C /* FaceAppDelegate.swift */; };
+		9474D3402456B3DA0096795C /* FaceInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9474D3192456B3DA0096795C /* FaceInfo.plist */; };
+		9474D3412456B3DA0096795C /* RoundedRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474D31B2456B3DA0096795C /* RoundedRectButton.swift */; };
+		9474D3422456B3DA0096795C /* UIKitExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474D31C2456B3DA0096795C /* UIKitExtras.swift */; };
+		9474D3432456B3DA0096795C /* FoundationExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474D31D2456B3DA0096795C /* FoundationExtras.swift */; };
+		9474D3452456B3DA0096795C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9474D31F2456B3DA0096795C /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +71,18 @@
 		159A421023F49286000A5376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15E002DD243AA3CD00BA6A96 /* MovementGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementGame.swift; sourceTree = "<group>"; };
 		19B173692403475400845819 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		9474D30E2456B3DA0096795C /* FaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
+		9474D30F2456B3DA0096795C /* Expressions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expressions.swift; sourceTree = "<group>"; };
+		9474D3122456B3DA0096795C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FaceLaunchScreen.storyboard; sourceTree = "<group>"; };
+		9474D3142456B3DA0096795C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FaceMain.storyboard; sourceTree = "<group>"; };
+		9474D3162456B3DA0096795C /* VirtualFaceContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualFaceContent.swift; sourceTree = "<group>"; };
+		9474D3172456B3DA0096795C /* Mask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mask.swift; sourceTree = "<group>"; };
+		9474D3182456B3DA0096795C /* FaceAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceAppDelegate.swift; sourceTree = "<group>"; };
+		9474D3192456B3DA0096795C /* FaceInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FaceInfo.plist; sourceTree = "<group>"; };
+		9474D31B2456B3DA0096795C /* RoundedRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedRectButton.swift; sourceTree = "<group>"; };
+		9474D31C2456B3DA0096795C /* UIKitExtras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtras.swift; sourceTree = "<group>"; };
+		9474D31D2456B3DA0096795C /* FoundationExtras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtras.swift; sourceTree = "<group>"; };
+		9474D31F2456B3DA0096795C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +133,7 @@
 		159A41EB23F49283000A5376 /* ARrehab */ = {
 			isa = PBXGroup;
 			children = (
+				9474D30B2456B3DA0096795C /* FaceOff-master */,
 				159A41EC23F49283000A5376 /* AppDelegate.swift */,
 				159A41EE23F49283000A5376 /* ViewController.swift */,
 				15986815241EE627009456EF /* TraceGame.swift */,
@@ -141,6 +166,50 @@
 				159A421023F49286000A5376 /* Info.plist */,
 			);
 			path = ARrehabUITests;
+			sourceTree = "<group>";
+		};
+		9474D30B2456B3DA0096795C /* FaceOff-master */ = {
+			isa = PBXGroup;
+			children = (
+				9474D30D2456B3DA0096795C /* FaceOff */,
+				9474D31F2456B3DA0096795C /* .gitignore */,
+			);
+			name = "FaceOff-master";
+			path = "ARrehab/FaceOff-master";
+			sourceTree = SOURCE_ROOT;
+		};
+		9474D30D2456B3DA0096795C /* FaceOff */ = {
+			isa = PBXGroup;
+			children = (
+				9474D30E2456B3DA0096795C /* FaceViewController.swift */,
+				9474D30F2456B3DA0096795C /* Expressions.swift */,
+				9474D3182456B3DA0096795C /* FaceAppDelegate.swift */,
+				9474D3112456B3DA0096795C /* FaceLaunchScreen.storyboard */,
+				9474D3132456B3DA0096795C /* FaceMain.storyboard */,
+				9474D3152456B3DA0096795C /* Floating Mask */,
+				9474D3192456B3DA0096795C /* FaceInfo.plist */,
+				9474D31A2456B3DA0096795C /* Extras */,
+			);
+			path = FaceOff;
+			sourceTree = "<group>";
+		};
+		9474D3152456B3DA0096795C /* Floating Mask */ = {
+			isa = PBXGroup;
+			children = (
+				9474D3162456B3DA0096795C /* VirtualFaceContent.swift */,
+				9474D3172456B3DA0096795C /* Mask.swift */,
+			);
+			path = "Floating Mask";
+			sourceTree = "<group>";
+		};
+		9474D31A2456B3DA0096795C /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				9474D31B2456B3DA0096795C /* RoundedRectButton.swift */,
+				9474D31C2456B3DA0096795C /* UIKitExtras.swift */,
+				9474D31D2456B3DA0096795C /* FoundationExtras.swift */,
+			);
+			path = Extras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +316,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9474D3452456B3DA0096795C /* .gitignore in Resources */,
+				9474D3402456B3DA0096795C /* FaceInfo.plist in Resources */,
+				9474D33C2456B3DA0096795C /* FaceMain.storyboard in Resources */,
 				159A41F923F49286000A5376 /* LaunchScreen.storyboard in Resources */,
 				159A41F623F49286000A5376 /* Assets.xcassets in Resources */,
+				9474D33B2456B3DA0096795C /* FaceLaunchScreen.storyboard in Resources */,
 				159A41F423F49283000A5376 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,11 +350,19 @@
 				159A41EF23F49283000A5376 /* ViewController.swift in Sources */,
 				159A41ED23F49283000A5376 /* AppDelegate.swift in Sources */,
 				159A41F123F49283000A5376 /* Experience.rcproject in Sources */,
+				9474D3382456B3DA0096795C /* FaceViewController.swift in Sources */,
+				9474D33D2456B3DA0096795C /* VirtualFaceContent.swift in Sources */,
+				9474D33E2456B3DA0096795C /* Mask.swift in Sources */,
 				15264C962404DA4B00E4F2BB /* Player.swift in Sources */,
+				9474D3392456B3DA0096795C /* Expressions.swift in Sources */,
+				9474D3422456B3DA0096795C /* UIKitExtras.swift in Sources */,
+				9474D33F2456B3DA0096795C /* FaceAppDelegate.swift in Sources */,
+				9474D3412456B3DA0096795C /* RoundedRectButton.swift in Sources */,
 				1598681A242451FA009456EF /* Minigame.swift in Sources */,
 				15986816241EE627009456EF /* TraceGame.swift in Sources */,
 				19B1736A2403475400845819 /* Tile.swift in Sources */,
 				15E002DE243AA3CD00BA6A96 /* MovementGame.swift in Sources */,
+				9474D3432456B3DA0096795C /* FoundationExtras.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +412,22 @@
 				159A41F823F49286000A5376 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9474D3112456B3DA0096795C /* FaceLaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9474D3122456B3DA0096795C /* Base */,
+			);
+			name = FaceLaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9474D3132456B3DA0096795C /* FaceMain.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9474D3142456B3DA0096795C /* Base */,
+			);
+			name = FaceMain.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -455,13 +552,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X444959833;
+				DEVELOPMENT_TEAM = MU8MA92CA4;
 				INFOPLIST_FILE = ARrehab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ericwang.ARrehab;
+				PRODUCT_BUNDLE_IDENTIFIER = AlanZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -473,13 +570,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X444959833;
+				DEVELOPMENT_TEAM = MU8MA92CA4;
 				INFOPLIST_FILE = ARrehab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ericwang.ARrehab;
+				PRODUCT_BUNDLE_IDENTIFIER = AlanZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
